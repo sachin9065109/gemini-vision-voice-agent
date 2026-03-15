@@ -1,50 +1,48 @@
 # gemini-vision-voice-agent
 
-Gemini Vision-Voice Companion 🚀
+🚀 Gemini Vision-Voice Companion
 
-Gemini Vision-Voice Companion is a high-speed, real-time multimodal AI agent built for the Gemini Live Agent Challenge 2026. Leveraging the power of Gemini 1.5 Flash, this project processes live video and audio streams to provide an interactive, hands-free user experience.
+Gemini Vision-Voice Companion is a high-speed, real-time multimodal AI agent built for the Gemini Live Agent Challenge 2026. Using Gemini 1.5 Flash, it processes live video and audio to provide an interactive, hands-free user experience.
 
 🌟 Key Features
 
-Multimodal Intelligence: Seamlessly processes video frames and audio input for intelligent responses.
+🎥 Multimodal Intelligence: Seamlessly integrates video frames and audio input.
 
-Low-Latency Performance: Optimized for sub-second reasoning with instant vocal feedback.
+⚡ Low-Latency Performance: Sub-second reasoning with instant vocal feedback.
 
-Cloud-Native Design: Fully containerized and deployable on Google Cloud Run.
+☁️ Cloud-Native Design: Fully containerized and deployable on Google Cloud Run.
 
-User-Friendly Interface: Responsive web dashboard for live interactions.
+🖥️ User-Centric Interface: Responsive web dashboard for live interaction.
 
 🏗️ System Architecture
 
-The architecture is designed for speed, scalability, and reliability:
+Frontend: HTML5 & JavaScript (MediaDevices API) captures live streams.
 
-Frontend: HTML5 & JavaScript using the MediaDevices API to capture live streams.
+Backend: Python Flask server for multimodal data handling.
 
-Backend: Python Flask server managing multimodal data pipelines.
+AI Core: Gemini 1.5 Flash API for real-time visual & auditory reasoning.
 
-AI Core: Gemini 1.5 Flash API for real-time visual and auditory reasoning.
-
-Infrastructure: Dockerized and cloud-ready for seamless deployment on GCP.
+Infrastructure: Dockerized, cloud-ready for scalable deployment on GCP.
 
 🚀 Getting Started
-1. Clone the Repository
+1️⃣ Clone the Repository
 git clone https://github.com/sachin9065109/gemini-vision-voice-agent.git
 cd gemini-vision-voice-agent
-2. Install Dependencies
+2️⃣ Install Dependencies
 pip install -r requirements.txt
-3. Setup Environment
+3️⃣ Setup Environment
 
-Obtain your Gemini API Key from Google AI Studio and set it:
+Get your Gemini API Key from Google AI Studio:
 
 export GEMINI_API_KEY='your_actual_api_key'
-4. Run Locally
+4️⃣ Run Locally
 python app.py
 🐳 Docker & Cloud Deployment
-
-Build and run the container:
-
 docker build -t gemini-agent .
 docker run -p 8080:8080 -e GEMINI_API_KEY='your_key' gemini-agent
+
+Fully cloud-ready, works on Google Cloud Run with zero hassle.
+
 🛠️ Tech Stack
 
 Model: Gemini 1.5 Flash
@@ -54,5 +52,11 @@ Backend: Python / Flask
 Containerization: Docker
 
 Cloud: Google Cloud Platform (GCP)
+
+
+
+
+eveloped by Sachin Bhagat for the Gemini Live Agent Challenge 2026.
+
 
 Developed by Sachin Bhagat for the Gemini Live Agent Challenge 2026.
