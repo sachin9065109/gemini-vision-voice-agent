@@ -1,0 +1,51 @@
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>Gemini AI Assistant</title>
+</head>
+
+<body>
+
+<h2>Hinglish AI Assistant</h2>
+
+<p>Image upload karo aur question pucho</p>
+
+<input type="file" id="imageInput">
+<br><br>
+
+<input type="text" id="textInput" placeholder="Ask something">
+<br><br>
+
+<button onclick="send()">Send</button>
+
+<p id="response"></p>
+
+<script>
+
+function send(){
+
+let text = document.getElementById("textInput").value
+let image = document.getElementById("imageInput").files[0]
+
+let formData = new FormData()
+
+formData.append("text", text)
+
+if(image){
+formData.append("image", image)
+}
+
+fetch("/ask",{
+method:"POST",
+body:formData
+})
+.then(res=>res.json())
+.then(data=>{
+document.getElementById("response").innerText = data.answer
+})
+
+}
+
+</script>
+
+</body>

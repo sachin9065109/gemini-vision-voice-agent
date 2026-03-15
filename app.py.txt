@@ -1,0 +1,42 @@
+import google.generativeai as genai
+from flask import Flask, request, jsonify, send_file
+from PIL import Image
+
+API_KEY = "AIzaSyAaXj85O-_AOgxQzc9zWWytmHKVZWbV_ho"
+
+genai.configure(api_key=API_KEY)
+
+model = genai.GenerativeModel(
+    "gemini-1.5-flash",
+    system_instruction="You are a helpful AI personal assistant. Speak in Hinglish."
+)
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return send_file("index.html")
+
+@app.route("/ask", methods=["POST"])
+def ask():
+
+    text = request.form.get("text")
+    image_file = request.files.get("image")
+
+    inputs = []
+
+    if text:
+        inputs.append(text)
+
+    if image_file:
+        img = Image.open(image_file)
+        inputs.append(img)
+
+    response = model.generate_content(inputs)
+
+    return jsonify({
+        "answer": response.text
+    })
+
+if __name__ == "__main__":
+    app.run(debug=True)                              
