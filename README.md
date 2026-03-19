@@ -59,4 +59,5 @@ Cloud: Google Cloud Platform (GCP)
 eveloped by Sachin Bhagat for the Gemini Live Agent Challenge 2026.
 
 
-Developed by Sachin Bhagat for the Gemini Live Agent Challenge 2026.
+![Screenshot_19-3-2026_114347_gemini google com](https://github.com/user-attachments/assets/d65e91f2-d096-4cff-99cb-b55bdb35fe02)
+
